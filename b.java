@@ -14,4 +14,10 @@ public void method2b {
   System.out.println("Added Method 2b");
 }
 
+public void methodNew {
+	
+	System.out.println("Adding this method to test pull request.");
+}
+
+
 }
