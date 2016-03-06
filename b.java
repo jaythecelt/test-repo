@@ -6,6 +6,7 @@ public void method2 {
 
   System.out.println("This is a modified line in method2 (done on my-branch");
   System.out.println("Added line in my-branch");
+
 }
 
 public void method2b {
