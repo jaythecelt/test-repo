@@ -1,0 +1,48 @@
+---
+openapi: 3.0.2
+info:
+  title: Test
+  version: 1.0.0
+paths:
+  /account:
+    servers:
+    - url: https://z64l1vkk7g.execute-api.us-east-1.amazonaws.com/stageVS
+      description: ""
+    get:
+      responses:
+        "200":
+          description: Things are OK
+        "201":
+          $ref: '#/components/responses/Its_all_good'
+    parameters:
+    - name: myqueryparam
+      description: This is a test query param
+      schema:
+        type: string
+      in: query
+      required: true
+    - examples:
+        mytestparam:
+          value: '"some text"'
+      name: anotherparam
+      description: Another parameter
+      schema:
+        type: string
+      in: query
+      required: true
+    - name: ContentType
+      description: ""
+      schema: {}
+      in: header
+  /account/{accountuuid}:
+    get: {}
+    parameters:
+    - name: accountuuid
+      schema:
+        type: string
+      in: path
+      required: true
+components:
+  responses:
+    Its_all_good:
+      description: ""
